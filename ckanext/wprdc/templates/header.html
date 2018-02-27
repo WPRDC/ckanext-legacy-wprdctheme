@@ -41,110 +41,118 @@
     </div>
 </div>
 
-
 <!-- Top Bar-->
 <header id="header" class="site-header" role="banner">
-    <!-- Mobile -->
-    <div class="site-title-bar title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <div class="title-bar-left">
-            <button class="menu-icon" type="button" data-toggle="dafsd"></button>
-            <span class="site-mobile-title title-bar-title">
-                        <a href="#"></a>
-                    </span>
-        </div>
-    </div>
 
-    <!-- Computer -->
-    <nav class="site-navigation top-bar" role="navigation" data-show-for="medium" id="responsive-menu">
-        <div class="top-bar-left">
-            <div class="site-desktop-title top-bar-title">
-                <a href="{{ h.wprdc_wordpress_url() }}" rel="home">
-                    <img class="site-title-logo" src="{{ g.site_url + '/plain_logo_rbg_cropped.svg' }}"/>
-                </a>
+        <!-- Mobile -->
+        <div class="site-title-bar title-bar" data-responsive-toggle="mobile-menu" style="">
+            <div class="title-bar-left">
+                <span class="site-mobile-title title-bar-title">
+					<a href="http://www.wprdc.org/" rel="home">
+                        <img class="site-title-logo" src="https://www.wprdc.org/wp-content/themes/wprdc-redesign/assets/images/plain_logo_rbg_bridge.svg">
+
+                        <span class="site-title">WPRDC</span></a>
+				</span>
+            </div>
+            <div class="title-bar-right">
+
+                <button class="menu-icon light" type="button" data-toggle="mobile-menu"></button>
             </div>
         </div>
-        <div class="top-bar-right">
 
-            <div class="header-search">
-                <form method="get" action="https://data.wprdc.org/dataset">
-                    <div class="right input-group">
-                        <input name="q" type="text" class="input-group-field" placeholder="Search for open data"
-                               autocomplete="off">
-                        <div class="input-group-button">
-                            <button type="submit" class="button"><i class="material-icons">search</i></button>
+        <!-- Desktop -->
+        <nav class="site-navigation top-bar" role="navigation">
+            <div class="top-bar-left">
+                <div class="site-desktop-title top-bar-title">
+                    <a href="http://www.wprdc.org/" rel="home">
+                        <img class="site-title-logo" src="https://www.wprdc.org/wp-content/themes/wprdc-redesign/assets/images/plain_logo_rbg_cropped.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="top-bar-right">
+
+                <!-- Search -->
+                <!------------>
+                <div class="header-search hide-for-small show-for-medium" style="display: block">
+                    <form method="get" action="https://data.wprdc.org/dataset">
+                        <div class="right input-group" style="float: right">
+
+                            <input name="q" type="text" class="input-group-field" placeholder="Search for open data">
+
+                            <div class="input-group-button">
+                                <button type="submit" class="button"><i class="material-icons">search</i></button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div>
-
-                <ul id="menu-main" class="ckan dropdown menu desktop-menu" data-dropdown-menu="" role="menubar"
-                    data-is-click="false">
-                    <!--Data-->
-                    <li class="menu-item" role="menuitem"><a href="http://data.wprdc.org">Data</a>
-                        <ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle=""
-                            data-submenu="" role="menu" style="">
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem"><a
-                                    href="https://data.wprdc.org/dataset">Datasets</a></li>
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem"><a
-                                    href="https://data.wprdc.org/organization">Publishers</a></li>
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem"><a
-                                    href="https://data.wprdc.org/group">Topics</a></li>
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem"><a
-                                    href="https://data.wprdc.org/datarequest">Data Requests</a></li>
-                        </ul>
-                    </li>
-                    <!--tools-->
-                    <li class="menu-item" role="menuitem"><a href="https://tools.wprdc.org">Tools</a></li>
-                    <!--showcase-->
-                    <li class="menu-item" role="menuitem"><a
-                            href="{{ h.wprdc_wordpress_url() }}/category/showcase/">Showcase</a></li>
-
-                    <!--get involved-->
-                    <li class="menu-item is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
-                        aria-label="Get Involved" data-is-click="false"><a
-                            href="{{ h.wprdc_wordpress_url() }}/get-involved/">Get Involved</a>
-                        <ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle=""
-                            data-submenu="" role="menu" style="">
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/events/">Events</a>
-                            </li>                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/tutorials/">New to Open Data</a>
-                            </li>                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/tutorials/">Data Wizards</a>
-                            </li>                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/publishers/">Publishers</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!--news-->
-                    <li class="menu-item" role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/category/news/">News</a>
-                    </li>
-                    <!--about-->
-                    <li class="menu-item" role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/contact/">Contact
-                        Us</a></li>
-                    <!--contact-->
-                    <li class="menu-item is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
-                        aria-label="Get Involved" data-is-click="false"><a
-                            href="{{ h.wprdc_wordpress_url() }}/about/">About</a>
-                        <ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle=""
-                            data-submenu="" role="menu" style="">
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/background/">Background</a>
-                            </li>
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/people/">People</a>
-                            </li>
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/performance-management/">Performance Management</a>
-                            </li>
-                            <li class="menu-item is-submenu-item is-dropdown-submenu-item"
-                                role="menuitem"><a href="{{ h.wprdc_wordpress_url() }}/data-management-plan/">Data Management Plan</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+                    </form>
+                </div>
+                <!-- Menu -->
+                <!---------->
+<div>
+                <ul id="menu-new-menu" class="dropdown menu desktop-menu" data-dropdown-menu="v425ye-dropdown-menu" role="menubar" style="float: left; display: block""><li id="menu-item-1715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1715 is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="Data"><a href="https://data.wprdc.org">Data</a>
+<ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle="" data-submenu="" role="menu">
+	<li id="menu-item-1716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1716 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="https://data.wprdc.org/dataset">Datasets</a></li>
+	<li id="menu-item-1717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1717 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="https://data.wprdc.org/organization">Publishers</a></li>
+	<li id="menu-item-1718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1718 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="https://data.wprdc.org/groups">Topics</a></li>
+	<li id="menu-item-1719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1719 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="https://data.wprdc.org/datarequest">Data Requests</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="https://tools.wprdc.org/guides">Data Guides</a></li>
+</ul>
+</li>
+<li id="menu-item-1720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1720" role="menuitem"><a href="https://tools.wprdc.org">Tools</a></li>
+<li id="menu-item-1730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1730 is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="Get Involved"><a href="http://www.wprdc.org/get-involved/">Get Involved</a>
+<ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle="" data-submenu="" role="menu">
+	<li id="menu-item-1731" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1731 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/events/">Events</a></li>
+	<li id="menu-item-2949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2949 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/beginners/">Beginners</a></li>
+	<li id="menu-item-2993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2993 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/data-wizards/">Data Wizards</a></li>
+	<li id="menu-item-2994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2994 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/publishers/">Publishers</a></li>
+</ul>
+</li>
+<li id="menu-item-2950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2950 is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="News"><a href="http://www.wprdc.org/news/">News</a>
+<ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle="" data-submenu="" role="menu">
+	<li id="menu-item-2951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2951 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/category/news/">Blog</a></li>
+	<li id="menu-item-2986" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2986 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/newsletter/">Newsletter</a></li>
+</ul>
+</li>
+<li id="menu-item-1727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1727 is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="About"><a href="http://www.wprdc.org/about/">About</a>
+<ul class="dropdown menu vertical submenu is-dropdown-submenu first-sub" data-toggle="" data-submenu="" role="menu">
+	<li id="menu-item-2952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2952 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/people/">People</a></li>
+	<li id="menu-item-2953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2953 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="http://www.wprdc.org/performance-management/">Performance Management</a></li>
+</ul>
+</li>
+<li id="menu-item-1732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732" role="menuitem"><a href="http://www.wprdc.org/contact/">Contact Us</a></li>
+</ul>   
+</div>                                 
+<nav class="mobile-menu vertical menu" id="mobile-menu" role="navigation" style="display: none;">
+  <ul id="menu-new-menu-1" class="vertical menu" data-accordion-menu="oc2mnl-accordion-menu" role="menu" aria-multiselectable="true"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1715 is-accordion-submenu-parent" role="menuitem" aria-haspopup="true" aria-label="Data" aria-controls="s2vlmq-acc-menu" aria-expanded="false" id="v1t69u-acc-menu-link"><a href="https://data.wprdc.org">Data</a>
+<ul class="vertical nested menu submenu is-accordion-submenu" data-submenu="" role="menu" aria-labelledby="v1t69u-acc-menu-link" aria-hidden="true" id="s2vlmq-acc-menu" style="display: none;">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1716 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="https://data.wprdc.org/dataset">Datasets</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1717 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="https://data.wprdc.org/organization">Publishers</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1718 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="https://data.wprdc.org/groups">Topics</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1719 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="https://data.wprdc.org/datarequest">Data Requests</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1720" role="menuitem"><a href="https://tools.wprdc.org">Tools</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1730 is-accordion-submenu-parent" role="menuitem" aria-haspopup="true" aria-label="Get Involved" aria-controls="jpn2gx-acc-menu" aria-expanded="false" id="20o7pe-acc-menu-link"><a href="http://www.wprdc.org/get-involved/">Get Involved</a>
+<ul class="vertical nested menu submenu is-accordion-submenu" data-submenu="" role="menu" aria-labelledby="20o7pe-acc-menu-link" aria-hidden="true" id="jpn2gx-acc-menu" style="display: none;">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1731 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/events/">Events</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2949 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/beginners/">Beginners</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2993 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/data-wizards/">Data Wizards</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2994 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/publishers/">Publishers</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2950 is-accordion-submenu-parent" role="menuitem" aria-haspopup="true" aria-label="News" aria-controls="m0rkgh-acc-menu" aria-expanded="false" id="x91ohm-acc-menu-link"><a href="http://www.wprdc.org/news/">News</a>
+<ul class="vertical nested menu submenu is-accordion-submenu" data-submenu="" role="menu" aria-labelledby="x91ohm-acc-menu-link" aria-hidden="true" id="m0rkgh-acc-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2951 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/category/news/">Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2986 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/newsletter/">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1727 is-accordion-submenu-parent" role="menuitem" aria-haspopup="true" aria-label="About" aria-controls="dle2ti-acc-menu" aria-expanded="false" id="2dmebs-acc-menu-link"><a href="http://www.wprdc.org/about/">About</a>
+<ul class="vertical nested menu submenu is-accordion-submenu" data-submenu="" role="menu" aria-labelledby="2dmebs-acc-menu-link" aria-hidden="true" id="dle2ti-acc-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2952 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/people/">People</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2953 is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="http://www.wprdc.org/performance-management/">Performance Management</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732" role="menuitem"><a href="http://www.wprdc.org/contact/">Contact Us</a></li>
+</ul></nav>
+                            </div>
+        </nav>
+    </header>

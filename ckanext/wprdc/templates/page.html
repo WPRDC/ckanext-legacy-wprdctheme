@@ -11,7 +11,7 @@
     <div class="reveal tiny" data-reveal id="terms-reveal"
          data-module="terms-reveal"
          data-close-on-esc="false" data-close-on-click="false" data-v-offset="200">
-        {% include "terms/index.html" %}
+        {% include "terms.html" %}
     </div>
 
     {% endif %}
@@ -48,7 +48,7 @@ file.
         </div>
         {% endblock %}
 
-        <div class="hide-for-medium-down">
+        <div class="hide-for-small show-for-medium">
             {% block toolbar %}
             <div class="toolbar">
                 {% block breadcrumb %}
